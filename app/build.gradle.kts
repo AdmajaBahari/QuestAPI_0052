@@ -1,8 +1,8 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.compose)
-
-    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.compose) apply false
+    alias(libs.plugins.kotlin.serialization) apply false
 }
 
 android {
@@ -41,6 +41,7 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.icons.core)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
