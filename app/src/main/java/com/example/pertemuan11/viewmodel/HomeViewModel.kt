@@ -32,9 +32,8 @@ class HomeViewModel(
             listSiswa = StatusUiSiswa.Loading
             listSiswa = try {
                 StatusUiSiswa.Success(repositoryDataSiswa.getDataSiswa())
-            } catch (e: IOException) {
-                StatusUiSiswa.Error
             } catch (e: Exception) {
+                android.util.Log.e("CEK_API", "Gagal baca data", e)
                 StatusUiSiswa.Error
             }
         }
